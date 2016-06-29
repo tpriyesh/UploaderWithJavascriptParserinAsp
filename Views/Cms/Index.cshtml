@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+    int count = 0;
+    int recordCounter = 0;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+    <style type="text/css">
+    .tblClass {
+   width: 730px;
+   border: 1px solid #cef;
+   margin: 1em 25px;
+   text-align: left; }
+.thheading {
+   font-weight: bold;
+   background-color: #acf;
+   border-bottom: 1px solid #cef; }
+.tddata,.thheading {
+   padding: 4px 5px; }
+.odd {
+   background-color: #def; }
+.odd .tddata {
+   border-bottom: 1px solid #cef; }
+</style>
+
+</head>
+<body>
+    <div>
+
+     <div style="width: 70%; padding: 5px; margin: 0px auto;">
+
+     <center><h1>Clients List</h1></center>
+     </div>
+
+    <div style="width: 90%; background-color: #ccc; border: 1px dotted #333; padding: 5px; margin: 0px auto;">
+            <form>
+                 <div style="width: 70%; padding: 5px; margin: 0px auto;">
+                 <a href="/Cms/Create">Create New Client</a>
+                 </div>
+             <div style="width: 70%; padding: 5px; margin: 0px auto;height:500px;overflow-y:scroll">
+     
+          <table class='tblClass'><th class='thheading'>Client Name</th><th class='thheading'>Action
+          
+          </th>;
+
+          
+          @foreach (var client in ViewBag.ClientName)
+          {
+          recordCounter++;
+                      if(count%2==0)
+                      {
+                          <tr class='trClass even'><td class='tddata'>@client</td><td class='tddata'><a class="link" href="/Cms/EditClient?clientName=@client">Edit</a></td></tr>
+                          }
+              else
+              {
+           <tr class='trClass odd'><td class='tddata'>@client</td><td class='tddata'><a class="link" href="/Cms/EditClient?clientName=@client">Edit</a></td></tr>
+              }
+
+              count++;
+              
+            
+          }
+          @if (recordCounter == 0)
+          { 
+          <tr><td colspan="2">Currently No Client is Present . To create client Please go to <a href="/Cms/Create">Create Client</a> link.</td></tr>
+          
+          }
+                                    
+                       
+                          
+                  
+           </table>
+           </div>
+
+
+
+            </form>
+
+
+
+            </div>
+
+        
+    </div>
+</body>
+</html>

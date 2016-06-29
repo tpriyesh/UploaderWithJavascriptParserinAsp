@@ -1,0 +1,1169 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <style type="text/css">
+        
+         body {
+	font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+	font-size: 80%;
+}
+        div.row {
+            clear: both;
+            padding-top: 5px;
+        }
+
+            div.row span.label {
+                float: left;
+                width: 250px;
+                text-align: right;
+            }
+
+            div.row span.formw {
+               
+                width: 235px;
+                text-align: left;
+            }
+    </style>
+    <link href="@Url.Content("~/Content/jquery.minicolors.css")" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+   
+    
+
+</head>
+<body>
+    <div>
+
+     <div style="width: 500px; padding: 5px; margin: 0px auto;">
+   <center><h4> Edit Client
+</h4></center>   
+
+<div><a href="/Cms/Create">Click Here to Create Client</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/Cms/Index">Click Here to go to Client Listing Page</a></div> </div>
+        <div style="width: 90%; background-color: #ccc; border: 1px dotted #333; padding: 5px; margin: 0px auto;">
+            <form>
+
+
+            <input type="hidden" id="uploadActive" name="uploadActive" value="0" />
+               <input type="hidden" id="fileName" name="fileName" value="" />
+
+
+               <div style="float:left">
+                <div class="row">
+                    <span class="label"> Client Name:</span><span
+                        class="formw"><input type="text" id="client" name="client" /></span>
+                </div>
+                 
+
+                 <div class="row">
+                    <span class="label"> Height:</span><span
+                        class="formw"><input type="text" id="scoreboardheight" class="numbersOnly" name="scoreboardheight" size="25" /></span>
+                </div>
+
+                 <div class="row">
+                    <span class="label"> Width:</span><span
+                        class="formw"><input type="text" id="scoreboardwidth" class="numbersOnly" name="scoreboardwidth" size="25" /></span>
+                </div>
+
+                <div class="row">
+                    <span class="label">Scoreboard Background:</span><span
+                        class="formw"><input type="text" class="color" id="scoreboardBackgroundColor" name="scoreboardBackgroundColor" size="25" /></span>
+                </div>
+                <div class="row">
+                    <span class="label">Series Title:</span><span
+                        class="formw"><input type="text" id="seriesNameTextColor" class="color" name="seriesNameTextColor" size="25" /></span>
+                </div>
+                <div class="row">
+                    <span class="label">Navigation Buttons:</span><span
+                        class="formw"><input type="text" id="navLeftRightButtonsColor" class="color" name="navLeftRightButtonsColor" size="25" /></span>
+                </div>
+               <div class="row">
+                    <span class="label">Title Background:</span><span
+                        class="formw"><input type="text" id="componentHeaderBackgroundColor" class="color" name="componentHeaderBackgroundColor" size="25" /></span>
+                </div>
+                <div class="row">
+                    <span class="label">Top Component Title Foreground:</span><span
+                        class="formw"><input type="text" class="color" id="componentHeaderForegroundColorTopComponents" name="componentHeaderForegroundColorTopComponents" size="25" /></span>
+                </div>
+                <div class="row">
+                    <span class="label">Bottom Component Title Foreground:</span><span
+                        class="formw"><input type="text" class="color" id="componentHeaderForegroundColorBottomComponents" name="componentHeaderForegroundColorBottomComponents" size="25" /></span>
+                </div>
+                <div class="row">
+                    <span class="label">Header Tab Foreground:</span><span
+                        class="formw"><input type="text" class="color" size="25" id="headerTabsForegroundColor" name="headerTabsForegroundColor" /></span>
+                </div>
+                <div class="row">
+                    <span class="label">Match Tab Foreground:</span><span
+                        class="formw"><input type="text" size="25" class="color" id="matchTabsForegroundColor" name="matchTabsForegroundColor" /></span>
+                </div>
+                <div class="row">
+                    <span class="label">Tab Selected Foreground:</span><span
+                        class="formw"><input type="text" size="25" class="color" id="TabsSelectedForegroundColor" name="TabsSelectedForegroundColor" /></span>
+                </div>
+                 <div class="row">
+                    <span class="label">Tab Selected Background:</span><span
+                        class="formw"><input type="text" size="25" class="color" id="TabsSelectedBackgroundColor" name="TabsSelectedBackgroundColor" /></span>
+                </div>
+                <div class="row">
+                    <span class="label">Tab Hovered Background:</span><span
+                        class="formw"><input type="text" size="25" class="color" id="TabsHoveredBackgroundColor" name="TabsHoveredBackgroundColor" /></span>
+                </div>
+                <div class="row">
+                    <span class="label">Tab Hovered Foreground:</span><span
+                        class="formw"><input type="text" size="25" class="color" id="TabsHoveredForegroundColor" name="TabsHoveredForegroundColor" /></span>
+                </div>
+
+
+                 <div class="row">
+                    <span class="label">Match Local Time Label:</span><span
+                        class="formw"><input type="text" class="color" size="25" id="MatchLocalTimeTextColor" name="MatchLocalTimeTextColor" /></span>
+                </div>
+                <div class="row">
+                    <span class="label">Footer Image Url:</span><span
+                        class="formw"><input type="text" size="25" id="FooterImageUrl" name="FooterImageUrl" /></span>
+                </div>
+
+
+
+
+                  <div class="row">
+                    <span class="label">Api Url:</span><span
+                        class="formw"><input type="text" size="25" id="BaseUrl" name="BaseUrl" /></span>
+                </div>
+
+                 <div class="row">
+                    <span class="label">IsAfp:</span><span
+                        class="formw"><input type="checkbox" size="25" id="isAfp" name="isAfp" /></span>
+                </div>
+
+                <div>
+                <input type="hidden" id="hdnField" name="hdnField" />
+                </div>
+
+                <div class="row">
+                    <span class="label">Series:<font color="red">*</font></span>
+                       
+                </div>
+                <div class="row">
+                <div style="margin-left:250px;top:-25px;position:relative">
+                    @foreach (var ser in ViewBag.Series )
+                    { 
+                    
+                    <input type="checkbox" class="series" id="@ser.Id" name="check_@ser.ShortName" data-name="@ser.Name" data-shortName="@ser.ShortName" />@ser.Name<br />
+                    }
+                    </div>
+
+                </div>
+
+                   <div class="row">
+                    <span class="label">Components:<font color="red">*</font></span>
+                       
+                </div>
+                <div class="row">
+                <div style="margin-left:250px;top:-25px;position:relative">
+                    @foreach (var component in ViewBag.Components )
+                    { 
+                    
+                    <input type="checkbox" class="component" id="@component.ComponentName" name="check_@component.ComponentName" />@component.ComponentName<br />
+                    }
+                    </div>
+                </div>
+
+
+
+
+
+
+                </div>
+
+
+
+                <div style="float:left">
+
+                    <div class="row">
+                    <span class="label">Color1:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color1" name="color1" /></span>
+                </div>
+
+                  <div class="row">
+                    <span class="label">Color2:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color2" name="color2" /></span>
+                </div>
+
+                    <div class="row">
+                    <span class="label">Color3:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color3" name="color3" /></span>
+                </div>
+                <div class="row">
+                    <span class="label">Color4:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color4" name="color4" /></span>
+                </div>
+
+                <div class="row">
+                    <span class="label">Color5:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color5" name="color5" /></span>
+                </div>
+
+                <div class="row">
+                    <span class="label">Color6:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color6" name="color6" /></span>
+                </div>
+
+
+                <div class="row">
+                    <span class="label">Color7:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color7" name="color7" /></span>
+                </div>
+
+                <div class="row">
+                    <span class="label">Color8:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color8" name="color8" /></span>
+                </div>
+
+
+                 <div class="row">
+                    <span class="label">Color9:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color9" name="color9" /></span>
+                </div>
+
+                 <div class="row">
+                    <span class="label">Color10:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color10" name="color10" /></span>
+                </div>
+
+
+                <div class="row">
+                    <span class="label">Color11:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color11" name="color11" /></span>
+                </div>
+
+
+                <div class="row">
+                    <span class="label">Color12:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color12" name="color12" /></span>
+                </div>
+
+
+                <div class="row">
+                    <span class="label">Color13:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color13" name="color13" /></span>
+                </div>
+
+                <div class="row">
+                    <span class="label">Color14:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color14" name="color14" /></span>
+                </div>
+
+
+                <div class="row">
+                    <span class="label">Color15:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color15" name="color15" /></span>
+                </div>
+
+
+                <div class="row">
+                    <span class="label">Color16:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color16" name="color16" /></span>
+                </div>
+
+                  <div class="row">
+                    <span class="label">Color17:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color17" name="color17" /></span>
+                </div>
+
+                  <div class="row">
+                    <span class="label">Color18:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color18" name="color18" /></span>
+                </div>
+
+
+                 <div class="row">
+                    <span class="label">Color19:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color19" name="color19" /></span>
+                </div>
+
+                  <div class="row">
+                    <span class="label">Color20:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color20" name="color20" /></span>
+                </div>
+
+
+                  <div class="row">
+                    <span class="label">Color21:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color21" name="color21" /></span>
+                </div>
+
+                 <div class="row">
+                    <span class="label">Color22:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color22" name="color22" /></span>
+                </div>
+
+                 <div class="row">
+                    <span class="label">Color23:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color23" name="color23" /></span>
+                </div>
+
+
+                 <div class="row">
+                    <span class="label">Color24:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color24" name="color24" /></span>
+                </div>
+
+                 <div class="row">
+                    <span class="label">Color25:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color25" name="color25" /></span>
+                </div>
+
+                 <div class="row">
+                    <span class="label">Color26:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" class="color" id="color26" name="color26" /></span>
+                </div>
+
+
+
+               
+
+                     <div class="row">
+                    <span class="label">Menu Image Url:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" title="For Image In root directory enter image name like logo.png . For Image in directory enter url like ../Image/logo.png or Image/logo.png" id="MenuImageUrl" name="MenuImageUrl" /></span>
+                </div>
+
+
+                 <div class="row">
+                    <span class="label">AdminParams:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" id="AdminParams" name="AdminParams" /></span>
+                </div>
+
+                <div class="row">
+                    <span class="label">PrevArrowUrl:<font color="red">*</font></span><span
+                        class="formw"><input type="text" title="For Image In root directory enter image name like logo.png . For Image in directory enter url like ../Image/logo.png or Image/logo.png" size="25" id="PrevArrowUrl" name="PrevArrowUrl" /></span>
+                </div>
+
+                <div class="row">
+                    <span class="label">NextArrowUrl:<font color="red">*</font></span><span
+                        class="formw"><input type="text" size="25" title="For Image In root directory enter image name like logo.png . For Image in directory enter url like ../Image/logo.png or Image/logo.png" id="NextArrowUrl" name="NextArrowUrl" /></span>
+                </div>
+
+                 <div class="row">
+                    <span class="label">Google Analytic Script:</span><span
+                        class="formw"><textarea id="ganalytics" name="ganalytics" rows="4" cols="30">
+
+</textarea></span>
+                </div>
+                </div>
+
+
+                <div class="row">
+                 <div style="margin-left:150px;">   <input type="button" id="btnSubmit" value="Submit" />
+                 
+                 <input type="button" id="btnUpload" value="Upload" />
+                 
+                 </div>
+                </div>
+                <div class="spacer">
+                    &nbsp;
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery.minicolors.js")" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function () {
+
+            //$('#scoreboardBackgroundColor').colpick();
+
+            $('.color').minicolors();
+
+            $(document).tooltip();
+            if (getParameterByName("clientName") == "") {
+
+                window.location.href = "/Cms/Index";
+                return false;
+
+            }
+
+            LoadClientInformation(getParameterByName("clientName"));
+
+            function UploadFileToServer() {
+
+                var uploadActiveVal = $("#uploadActive").val();
+                var fileNameVal = $("#fileName").val();
+
+                if (uploadActiveVal != "0" && fileNameVal != "") {
+
+                    $.ajax({
+                        url: '/Cms/UploadFileToServer',
+                        data: { clientName: fileNameVal },
+                        type: 'post',
+                        //  contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (output) {
+
+
+                            if (output.status == "0")
+                                alert("File is not uploaded. Something went wrong");
+                            else
+                                alert("File Uploaded SuccessFully");
+                        },
+                        error: function (output) {
+
+                            alert("Problem in Uploading , Go to Edit section to upload the file ");
+
+                        }
+                    });
+                }
+                else {
+                    alert("Upload is not active");
+                }
+
+                return false;
+
+
+            }
+
+            function MakeUploadActive(fileName) {
+
+
+                $("#uploadActive").val("1");
+                $("#fileName").val(fileName);
+
+
+
+
+            }
+
+
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+                return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+
+
+            function InsertRecord() {
+                var compCounter = 1;
+                var seriesCounter = 1;
+
+                var clientName = getParameterByName("clientName");
+
+
+
+
+                if (clientName == "") {
+
+                    $("#hdnField").val(0);
+                    alert("Something went wrong");
+                    return false;
+
+                }
+                else {
+                    $("#hdnField").val(1);
+                }
+
+                    $('.series').each(function (index, value) {
+                var isChecked = $(this).is(":checked");
+                if (isChecked == true) {
+                seriesCounter++;
+                }
+
+
+                });
+
+                if (seriesCounter == 1) {
+                alert("Please select atleast 1 series");
+                return false;
+                }
+
+
+                $('.component').each(function (index, value) {
+                var isChecked = $(this).is(":checked");
+                if (isChecked == true) {
+                compCounter++;
+                }
+
+
+                });
+
+                if (compCounter == 1) {
+
+                alert("Please select atleast 1 component");
+                return false;
+                }
+
+               
+
+
+
+
+
+
+
+
+
+
+
+                var objComponent = new Array();
+
+                var objSeriesArray = new Array();
+
+                $('.component').each(function (index, value) {
+                    var isChecked = $(this).is(":checked");
+                    if (isChecked == true) {
+                        objComponent.push($(this).prop("id"));
+                    }
+
+
+                });
+                $('.series').each(function (index, value) {
+                    var isChecked = $(this).is(":checked");
+                    if (isChecked == true) {
+                        var objSeries = new Object();
+                        var Name = $(this).attr("data-name");
+                        var shortName = $(this).attr("data-shortName");
+                        var Id = $(this).prop("id");
+                        objSeries.Name = Name;
+                        objSeries.ShortName = shortName;
+                        objSeries.Id = Id;
+                        objSeriesArray.push(objSeries);
+
+                    }
+
+
+                });
+
+                //params
+                var ClientName = clientName;
+                var scoreboardBackgroundColor = $("#scoreboardBackgroundColor").val();
+                var headerTabsForegroundColor = $("#headerTabsForegroundColor").val();
+                var matchTabsForegroundColor = $("#matchTabsForegroundColor").val();
+                var scoreboardheight = $("#scoreboardheight").val();
+                var scoreboardwidth = $("#scoreboardwidth").val();
+                var seriesNameTextColor = $("#seriesNameTextColor").val();
+                var navLeftRightButtonsColor = $("#navLeftRightButtonsColor").val();
+                var componentHeaderBackgroundColor = $("#componentHeaderBackgroundColor").val();
+                var componentHeaderForegroundColorTopComponents = $("#componentHeaderForegroundColorTopComponents").val();
+                var componentHeaderForegroundColorBottomComponents = $("#componentHeaderForegroundColorBottomComponents").val();
+                var headerTabsForegroundColor = $("#headerTabsForegroundColor").val();
+
+                var matchTabsForegroundColor = $("#matchTabsForegroundColor").val();
+
+                var TabsSelectedForegroundColor = $("#TabsSelectedForegroundColor").val();
+
+                var TabsSelectedBackgroundColor = $("#TabsSelectedBackgroundColor").val();
+
+                var TabsHoveredBackgroundColor = $("#TabsHoveredBackgroundColor").val();
+
+                var TabsHoveredForegroundColor = $("#TabsHoveredForegroundColor").val();
+                var MatchLocalTimeTextColor = $("#MatchLocalTimeTextColor").val();
+                var isAfp = $("#isAfp").is(":checked");
+                var hdnField = $("#hdnField").val();
+                var BaseUrl = $("#BaseUrl").val();
+                var FooterImageUrl = $("#FooterImageUrl").val();
+                var gAnalytics = $("#ganalytics").val();
+
+
+
+                //New colors
+
+
+
+                var color1 = $("#color1").val(); var color2 = $("#color2").val(); var color3 = $("#color3").val(); var color4 = $("#color4").val();
+                var color5 = $("#color5").val(); var color6 = $("#color6").val(); var color7 = $("#color7").val(); var color8 = $("#color8").val(); var color9 = $("#color9").val();
+                var color10 = $("#color10").val(); var color11 = $("#color11").val(); var color12 = $("#color12").val(); var color13 = $("#color13").val(); var color14 = $("#color14").val(); var color15 = $("#color15").val();
+                var color16 = $("#color16").val(); var color17 = $("#color17").val(); var color18 = $("#color18").val(); var color19 = $("#color19").val(); var color20 = $("#color20").val();
+                var color21 = $("#color21").val(); var color22 = $("#color22").val(); var color23 = $("#color23").val(); var color24 = $("#color24").val();
+                var color25 = $("#color25").val(); var color26 = $("#color26").val();
+
+
+                var menuImageUrl = $("#MenuImageUrl").val();
+                var prevArrowUrl = $("#PrevArrowUrl").val();
+                var nextArrowUrl = $("#NextArrowUrl").val();
+                var adminParams = $("#AdminParams").val();
+
+
+
+                //end of new colors
+
+
+                //colors validation
+
+                if (color1 == "") {
+
+                    alert("Please Enter Color1");
+                    return false;
+                }
+
+
+                if (color2 == "") {
+
+                    alert("Please Enter Color2");
+                    return false;
+                }
+
+                if (color3 == "") {
+
+                    alert("Please Enter Color3");
+                    return false;
+                }
+
+                if (color4 == "") {
+
+                    alert("Please Enter Color4");
+                    return false;
+                }
+
+                if (color5 == "") {
+
+                    alert("Please Enter Color5");
+                    return false;
+                }
+
+                if (color6 == "") {
+
+                    alert("Please Enter Color6");
+                    return false;
+                }
+                if (color7 == "") {
+
+                    alert("Please Enter Color7");
+                    return false;
+                }
+
+                if (color8 == "") {
+
+                    alert("Please Enter Color8");
+                    return false;
+                }
+                if (color9 == "") {
+
+                    alert("Please Enter Color9");
+                    return false;
+                }
+                if (color10 == "") {
+
+                    alert("Please Enter Color10");
+                    return false;
+                }
+                if (color11 == "") {
+
+                    alert("Please Enter Color11");
+                    return false;
+                }
+                if (color12 == "") {
+
+                    alert("Please Enter Color12");
+                    return false;
+                }
+                if (color13 == "") {
+
+                    alert("Please Enter Color13");
+                    return false;
+                }
+                if (color14 == "") {
+
+                    alert("Please Enter Color14");
+                    return false;
+                }
+                if (color15 == "") {
+
+                    alert("Please Enter Color15");
+                    return false;
+                }
+                if (color16 == "") {
+
+                    alert("Please Enter Color16");
+                    return false;
+                }
+
+                if (color17 == "") {
+
+                    alert("Please Enter Color17");
+                    return false;
+                }
+
+                if (color18 == "") {
+
+                    alert("Please Enter Color18");
+                    return false;
+                }
+
+                if (color19 == "") {
+
+                    alert("Please Enter Color19");
+                    return false;
+                }
+
+                if (color20 == "") {
+
+                    alert("Please Enter Color20");
+                    return false;
+                }
+                if (color21 == "") {
+
+                    alert("Please Enter Color21");
+                    return false;
+                }
+                if (color22 == "") {
+
+                    alert("Please Enter Color22");
+                    return false;
+                }
+                if (color23 == "") {
+
+                    alert("Please Enter Color23");
+                    return false;
+                }
+                if (color24 == "") {
+
+                    alert("Please Enter Color24");
+                    return false;
+                }
+                if (color25 == "") {
+
+                    alert("Please Enter Color25");
+                    return false;
+                }
+                if (color26 == "") {
+
+                    alert("Please Enter Color26");
+                    return false;
+                }
+                if (menuImageUrl == "") {
+                    alert("Please Enter MenuImageUrl");
+                    return false;
+
+                }
+                if (adminParams == "") {
+                    alert("Please Enter AdminParams");
+                    return false;
+
+                }
+                if (prevArrowUrl == "") {
+                    alert("Please Enter PrevArrowUrl");
+                    return false;
+
+                }
+
+                if (nextArrowUrl == "") {
+                    alert("Please Enter NextArrowUrl");
+                    return false;
+
+                }
+
+                //end
+
+
+
+
+
+
+
+
+
+                //end
+
+                //  console.log(objComponent);
+
+                var obj = {
+
+                    ClientName: ClientName,
+                    BaseUrl: BaseUrl,
+                    FooterImageUrl: FooterImageUrl,
+                    hdnField: hdnField,
+                    scoreboardBackgroundColor: scoreboardBackgroundColor,
+                    headerTabsForegroundColor: headerTabsForegroundColor,
+                    matchTabsForegroundColor: matchTabsForegroundColor,
+                    scoreboardheight: scoreboardheight,
+                    scoreboardwidth: scoreboardwidth,
+                    seriesNameTextColor: seriesNameTextColor,
+                    navLeftRightButtonsColor: navLeftRightButtonsColor,
+                    componentHeaderBackgroundColor: componentHeaderBackgroundColor,
+                    componentHeaderForegroundColorTopComponents: componentHeaderForegroundColorTopComponents,
+                    componentHeaderForegroundColorBottomComponents: componentHeaderForegroundColorBottomComponents,
+                    headerTabsForegroundColor: headerTabsForegroundColor,
+                    matchTabsForegroundColor: matchTabsForegroundColor,
+                    TabsSelectedForegroundColor: TabsSelectedForegroundColor,
+                    TabsSelectedBackgroundColor: TabsSelectedBackgroundColor,
+                    TabsHoveredBackgroundColor: TabsHoveredBackgroundColor,
+                    TabsHoveredForegroundColor: TabsHoveredForegroundColor,
+                    MatchLocalTimeTextColor: MatchLocalTimeTextColor,
+
+
+                    Color1: color1,
+                    Color2: color2,
+                    Color3: color3,
+                    Color4: color4,
+                    Color5: color5,
+                    Color6: color6,
+                    Color7: color7,
+                    Color8: color8,
+                    Color9: color9,
+                    Color10: color10,
+                    Color11: color11,
+                    Color12: color12,
+                    Color13: color13,
+                    Color14: color14,
+                    Color15: color15,
+                    Color16: color16,
+                    Color17: color17,
+                    Color18: color18,
+                    Color19: color19,
+                    Color20: color20,
+                    Color21: color21,
+                    Color22: color22,
+                    Color23: color23,
+                    Color24: color24,
+                    Color25: color25,
+                    Color26: color26,
+                    MenuImageUrl: menuImageUrl,
+                    AdminParams: adminParams,
+                    NextArrowUrl: nextArrowUrl,
+                    PrevArrowUrl: prevArrowUrl,
+                    GAnalytics: gAnalytics,
+
+
+
+
+                    isAfp: isAfp,
+                    Component: objComponent,
+                    Series: objSeriesArray
+                }
+
+                $.ajax({
+                    url: '/Cms/Save',
+                    data: JSON.stringify(obj),
+                    type: 'post',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (output) {
+                        alert("SucessFully Saved");
+                    },
+                    error: function (error) {
+                        alert("Something went wrong");
+                    }
+                });
+
+                return false;
+
+            }
+            function FillValue(result) {
+
+                $("#scoreboardBackgroundColor").val(result.scoreboardBackgroundColor);
+                $("#headerTabsForegroundColor").val(result.scoreboardBackgroundColor);
+                $("#matchTabsForegroundColor").val(result.matchTabsForegroundColor);
+                $("#scoreboardheight").val(result.scoreboardheight);
+                $("#scoreboardwidth").val(result.scoreboardwidth);
+                $("#seriesNameTextColor").val(result.seriesNameTextColor);
+                $("#navLeftRightButtonsColor").val(result.navLeftRightButtonsColor);
+                $("#componentHeaderBackgroundColor").val(result.componentHeaderBackgroundColor);
+                $("#componentHeaderForegroundColorTopComponents").val(result.componentHeaderForegroundColorTopComponents);
+                $("#componentHeaderForegroundColorBottomComponents").val(result.componentHeaderForegroundColorBottomComponents);
+                $("#headerTabsForegroundColor").val(result.headerTabsForegroundColor);
+
+                $("#matchTabsForegroundColor").val(result.matchTabsForegroundColor);
+
+                $("#TabsSelectedForegroundColor").val(result.TabsSelectedForegroundColor);
+
+                $("#TabsSelectedBackgroundColor").val(result.TabsSelectedBackgroundColor);
+
+                $("#TabsHoveredBackgroundColor").val(result.TabsHoveredBackgroundColor);
+
+                $("#TabsHoveredForegroundColor").val(result.TabsHoveredForegroundColor);
+                $("#MatchLocalTimeTextColor").val(result.MatchLocalTimeTextColor);
+                $("#BaseUrl").val(result.BaseUrl);
+
+                $("#FooterImageUrl").val(result.FooterImageUrl);
+                $("#ganalytics").val(result.GAnalytics);
+
+
+
+
+
+
+
+
+                //color fill value
+
+
+                $("#color1").val(result.Color1);
+                $("#color2").val(result.Color2);
+                $("#color3").val(result.Color3);
+                $("#color4").val(result.Color4);
+                $("#color5").val(result.Color5);
+                $("#color6").val(result.Color6);
+                $("#color7").val(result.Color7);
+                $("#color8").val(result.Color8);
+                $("#color9").val(result.Color9);
+
+                $("#color10").val(result.Color10);
+                $("#color11").val(result.Color11);
+                $("#color12").val(result.Color12);
+                $("#color13").val(result.Color13);
+                $("#color14").val(result.Color14);
+                $("#color15").val(result.Color15); $("#color16").val(result.Color16);
+
+
+
+
+
+                $("#color17").val(result.Color17);
+                $("#color18").val(result.Color18);
+                $("#color19").val(result.Color19);
+                $("#color20").val(result.Color20);
+                $("#color21").val(result.Color21);
+                $("#color22").val(result.Color22);
+                $("#color23").val(result.Color23);
+
+
+                $("#color24").val(result.Color24);
+                $("#color25").val(result.Color25);
+                $("#color26").val(result.Color26);
+
+
+                $("#MenuImageUrl").val(result.MenuImageUrl);
+                $("#PrevArrowUrl").val(result.PrevArrowUrl);
+                $("#NextArrowUrl").val(result.NextArrowUrl);
+
+
+                $("#AdminParams").val(result.AdminParams);
+
+
+
+
+                //end of color
+
+
+
+
+                if (result.isAfp == true) {
+
+                    $("#isAfp").prop("checked", true);
+                }
+                else {
+                    $("#isAfp").prop("checked", false);
+
+                }
+
+
+                console.log(result);
+
+
+            }
+
+            function EmptyValues() {
+
+                $('form input[type="text"]').each(function () {
+
+                    var $this = $(this);
+                    $this.val("");
+                });
+                $('form input[type="checkbox"]').each(function () {
+
+                    var $this = $(this);
+                    $this.prop('checked', false);
+
+                });
+
+            }
+
+            function SuccessCallback(result) {
+
+                FillValue(result);
+
+
+                $.each(result.component, function () {
+
+                    if (this.ComponentName == "PlayerStats") {
+                        if (this.IsChecked == true) {
+                            $("#PlayerStats").prop("checked", true);
+                        }
+                    }
+
+                    if (this.ComponentName == "Standings") {
+                        if (this.IsChecked == true) {
+                            $("#Standings").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "News") {
+                        if (this.IsChecked == true) {
+                            $("#News").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "FormGuide") {
+                        if (this.IsChecked == true) {
+                            $("#FormGuide").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "LineUps") {
+                        if (this.IsChecked == true) {
+                            $("#LineUps").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "Commentary") {
+                        if (this.IsChecked == true) {
+                            $("#Commentary").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "Scorecard") {
+                        if (this.IsChecked == true) {
+                            $("#Scorecard").prop("checked", "checked");
+                        }
+                    }
+                    if (this.ComponentName == "MatchStats") {
+                        if (this.IsChecked == true) {
+                            $("#MatchStats").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "3dGoals") {
+                        if (this.IsChecked == true) {
+                            $("#3dGoals").prop("checked", true);
+                        }
+                    }
+
+                    if (this.ComponentName == "PrePrediction") {
+                        if (this.IsChecked == true) {
+                            $("#PrePrediction").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "Home") {
+                        if (this.IsChecked == true) {
+                            $("#Home").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "Venue") {
+                        if (this.IsChecked == true) {
+                            $("#Venue").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "Stars") {
+                        if (this.IsChecked == true) {
+                            $("#Stars").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "History") {
+                        if (this.IsChecked == true) {
+                            $("#History").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "Teams") {
+                        if (this.IsChecked == true) {
+                            $("#Teams").prop("checked", true);
+                        }
+                    }
+
+                    if (this.ComponentName == "Videos") {
+                        if (this.IsChecked == true) {
+                            $("#Videos").prop("checked", true);
+                        }
+                    }
+                    if (this.ComponentName == "Gallery") {
+                        if (this.IsChecked == true) {
+                            $("#Gallery").prop("checked", true);
+                        }
+                    }
+
+
+
+
+
+                    MakeUploadActive(result.ClientName);
+
+
+
+                });
+                $.each(result.series, function () {
+
+                    var self = this;
+                    $('.series').each(function (index, value) {
+
+                        var id = $(this).attr("id");
+
+                        if (self.Id == id) {
+                            $(this).prop("checked", true);
+
+
+                        }
+
+
+
+
+
+
+                    });
+
+                });
+
+
+
+
+                //   $("#matchTabsForegroundColor").val(result.matchTabsForegroundColor);
+                //   console.log(result);
+
+
+            }
+
+            function LoadClientInformation(clientName) {
+
+                EmptyValues();
+                $("#client").val(clientName);
+
+                $("#client").prop("disabled", true);
+                if (clientName == "") {
+
+                    $("#uploadActive").val("0");
+                    $("#fileName").val("");
+
+                    return false;
+
+                }
+
+                $.ajax({
+                    url: '/Cms/GetClientInformation',
+                    data: { clientName: clientName },
+                    type: 'post',
+                    // contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        SuccessCallback(result);
+                    },
+                    error: function (result) {
+                        alert("something went wrong");
+                    }
+                });
+
+
+
+            }
+
+
+            $("#btnSubmit").click(InsertRecord);
+            $("#Clients").change(LoadClientInformation)
+            jQuery('.numbersOnly').keyup(function () {
+                this.value = this.value.replace(/[^0-9\.]/g, '');
+            });
+
+            $("#btnUpload").click(UploadFileToServer);
+
+
+        });
+
+    </script>
+
+
+
+</body>
+</html>

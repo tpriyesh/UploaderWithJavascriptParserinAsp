@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Component>
+    <ComponentName>3dGoals</ComponentName>
+    <ComponentName>PrePrediction</ComponentName>
+    <ComponentName>Home</ComponentName>
+    <ComponentName>Venue</ComponentName>
+    <ComponentName>Stars</ComponentName>
+    <ComponentName>History</ComponentName>
+    <ComponentName>Teams</ComponentName>
+    <ComponentName>Videos</ComponentName>
+<ComponentName>Gallery</ComponentName>
+    <ComponentName>Standings</ComponentName>
+  <ComponentName>PlayerStats</ComponentName>
+  <ComponentName>News</ComponentName>
+  <ComponentName>FormGuide</ComponentName>
+  <ComponentName>LineUps</ComponentName>
+  <ComponentName>Commentary</ComponentName>
+  <ComponentName>Scorecard</ComponentName>
+  <ComponentName>MatchStats</ComponentName>
+</Component>

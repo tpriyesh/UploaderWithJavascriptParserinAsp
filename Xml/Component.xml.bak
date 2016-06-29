@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Component>
+  <ComponentName>Standings</ComponentName>
+  <ComponentName>PlayerStats</ComponentName>
+  <ComponentName>News</ComponentName>
+  <ComponentName>FormGuide<ComponentName>
+  <ComponentName>LineUps<ComponentName>
+  <ComponentName>Commentary<ComponentName>
+  <ComponentName>Scorecard<ComponentName>
+  <ComponentName>MatchStats<ComponentName>
+</Component>

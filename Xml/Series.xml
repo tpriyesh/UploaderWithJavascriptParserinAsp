@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Series>
+  <SeriesName  Id="305" ShortName="WORLDCUP_SHORT">WORLDCUP</SeriesName>
+  <SeriesName  Id="339" ShortName="ENGLISHPREMIERLEAGUE_SHORT">ENGLISHPREMIERLEAGUE</SeriesName>
+  <SeriesName  Id="352" ShortName="2014 Belgian League">BELGIANLEAGUE</SeriesName>
+  <SeriesName  Id="344" ShortName="FRENCHLIGUE1_SHORT">FRENCHLIGUE1</SeriesName>
+  <SeriesName  Id="348" ShortName="FRENCHLIGUE1_SHORT">UEFAEUROPALEAGUE_SHORT</SeriesName>
+  <SeriesName  Id="347" ShortName="UEFACHAMPIONSLEAGUE_SHORT">UEFACHAMPIONSLEAGUE</SeriesName>
+  <SeriesName  Id="345" ShortName="ITALIANSERIEA_SHORT">ITALIANSERIEA</SeriesName>
+  <SeriesName  Id="346" ShortName="SPANISHLALIGA_SHORT">SPANISHLALIGA</SeriesName>
+  <SeriesName  Id="342" ShortName="SPANISHLALIGA_SHORT">GERMANBUNDESLIGA</SeriesName>
+</Series>
