@@ -18,7 +18,7 @@ namespace CmsApplication.Controllers
         public ActionResult Index()
         {
             var directory = Server.MapPath("~/Config/");
-
+            var test = 1;
             string[] getAllPathsToTheClient = Directory.GetDirectories(directory);
             List<string> getAllClientDirectories = new List<string>();
             foreach (var path in getAllPathsToTheClient)
