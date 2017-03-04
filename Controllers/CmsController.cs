@@ -349,7 +349,7 @@ namespace CmsApplication.Controllers
             //end of admin param string
 
             //parms valueset
-
+            string admin = "23";
             string header = "/*** COLOR CUSTOMIZATION ***/";
 
             string parameters = "/** OVERALL BODY BACKGROUND **/\r\nvar scoreboardBackgroundColor=\"" + model.scoreboardBackgroundColor + "\""+";\r\n" +

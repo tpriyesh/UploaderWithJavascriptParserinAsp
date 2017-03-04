@@ -46,7 +46,7 @@ namespace CmsApplication.Code
 
 
 
-
+            var omps = 20;
 
            var matchTabsForegroundColor = new Regex(@"var\s+(matchTabsForegroundColor)\s*=\s*""([a-zA-Z0-9#]*)""");
            var matchTabsForegroundColorMatch = matchTabsForegroundColor.Match(body);
